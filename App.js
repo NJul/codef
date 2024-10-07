@@ -1,10 +1,18 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hello, StyleSheet!</Text>
+      <Text style={styles.text}>The first line of text in the app.</Text>
+      <Image
+        style={styles.image}
+        source={{
+          uri: 'https://codefinity-content-media-v2.s3.eu-west-1.amazonaws.com/courses/9cad8004-02f1-46b0-a31a-e39addcbc716/basic-concepts/react-native-logo.png',
+        }}
+        width={64}
+        height={64}
+      />
     </View>
   );
 };
@@ -16,10 +24,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'lightblue',
+    backgroundColor: '#00FFAB',
+    flexDirection: 'row',
   },
   text: {
-    fontSize: 24,
-    color: 'firebrick',
+    fontSize: 18,
+    color: '#913f92',
+  },
+  image: {
+    marginLeft: 10,
   },
 });
